@@ -5,7 +5,7 @@ const WorkoutDetails = ({ workout }) => {
     const {dispatch} = useWorkoutsContext()
 
     async function handleClick() {
-        const response = await fetch(`/api/workouts/${workout._id}`, {
+        const response = await fetch(`https://workout-buddy-server.onrender.com/api/workouts/${workout._id}`, {
             method: 'DELETE'
         })
         const json = await response.json()
